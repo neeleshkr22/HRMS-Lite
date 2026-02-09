@@ -379,34 +379,6 @@ App runs at: `http://localhost:5173`
 6. **No Pagination**: Suitable for small-medium employee counts
 7. **Status Values**: Only "Present" or "Absent" allowed
 
----
-
-## Deployment Guide
-
-### Backend (Render)
-
-1. Create Web Service on Render
-2. Connect GitHub repository
-3. Configure:
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-4. Add environment variable:
-   - `MONGO_URL` = your MongoDB Atlas connection string
-
-### Frontend (Vercel)
-
-1. Import project on Vercel
-2. Set root directory: `frontend`
-3. Add environment variable:
-   - `VITE_API_URL` = your Render backend URL
-4. Deploy
-
-### Database (MongoDB Atlas)
-
-1. Create free cluster on MongoDB Atlas
-2. Create database user with read/write access
-3. Whitelist IP addresses (or allow all: 0.0.0.0/0)
-4. Get connection string and add to backend .env
 
 ---
 
@@ -414,6 +386,3 @@ App runs at: `http://localhost:5173`
 
 Built for HRMS Lite Full-Stack Assignment
 
-## License
-
-MIT License
