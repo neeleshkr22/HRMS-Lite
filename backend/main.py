@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from controllers import employee_controller, attendance_controller, dashboard_controller
 
 app = FastAPI(title="HRMS Lite API", version="1.0.0", redirect_slashes=False)
 
@@ -13,10 +12,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# include routers
-app.include_router(employee_controller.router, prefix="/api/employees", tags=["Employees"])
-app.include_router(attendance_controller.router, prefix="/api/attendance", tags=["Attendance"])
-app.include_router(dashboard_controller.router, prefix="/api/dashboard", tags=["Dashboard"])
+# include routers with error handling
+try:
+    from controllers import employee_controller, attendance_controller, dashboard_controller
+    app.include_router(employee_controller.router, prefix="/api/employees", tags=["Employees"])
+    app.include_router(attendance_controller.router, prefix="/api/attendance", tags=["Attendance"])
+    app.include_router(dashboard_controller.router, prefix="/api/dashboard", tags=["Dashboard"])
+    print("All routers loaded successfully!")
+except Exception as e:
+    print(f"Error loading routers: {e}")
 
 @app.get("/")
 def root():
