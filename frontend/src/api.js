@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // API base URL - change this for production
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_URL = import.meta.env.VITE_API_URL || 'https://hrms-lite-backend-twn4.onrender.com'
 
 const api = axios.create({
   baseURL: API_URL,
