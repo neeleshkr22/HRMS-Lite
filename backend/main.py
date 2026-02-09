@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from controllers import employee_controller, attendance_controller, dashboard_controller
 
-app = FastAPI(title="HRMS Lite API", version="1.0.0")
+app = FastAPI(title="HRMS Lite API", version="1.0.0", redirect_slashes=False)
 
 # CORS setup - allowing all origins for now
 app.add_middleware(
