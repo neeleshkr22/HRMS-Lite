@@ -4,6 +4,7 @@ from datetime import date
 
 router = APIRouter()
 
+@router.get("")
 @router.get("/")
 def get_dashboard():
     total_employees = employees_collection.count_documents({})

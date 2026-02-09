@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="HRMS Lite API", version="1.0.0", redirect_slashes=False)
+app = FastAPI(title="HRMS Lite API", version="1.0.0")
 
 # CORS setup - allowing all origins for now
 app.add_middleware(
