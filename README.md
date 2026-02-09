@@ -2,6 +2,10 @@
 
 A full-stack web application for managing employees and tracking attendance, built with FastAPI (Python) and React.
 
+## Screenshot
+
+![Dashboard](frontend/dash.png)
+
 ## Table of Contents
 
 1. [Overview](#overview)
