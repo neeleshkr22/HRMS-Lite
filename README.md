@@ -17,7 +17,6 @@ A full-stack web application for managing employees and tracking attendance, bui
 7. [Setup Instructions](#setup-instructions)
 8. [Features](#features)
 9. [Assumptions](#assumptions)
-10. [Deployment Guide](#deployment-guide)
 
 ---
 
